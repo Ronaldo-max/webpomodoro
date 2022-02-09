@@ -69,6 +69,8 @@ svg {
     justify-content: center;
 }
 
+/* ================ buttons interativos =================== */
+
 .buttons {
     display: flex;
     align-items: center;
@@ -86,6 +88,11 @@ svg {
     height: 60px;
     border-radius: 30px;
     background: var(--whacking-dusky-blue);
+    opacity: 0.8;
+}
+
+.buttons button:hover {
+    opacity: 1;
 }
 
 .buttons button img {
