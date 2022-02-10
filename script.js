@@ -23,6 +23,18 @@ function updateInnerHtml (){
 
 let handle;
 
+const ActionsPlay = {
+    removeButtons() {
+        remover.style.display = "none"
+        add.style.display = "none"
+    },
+
+    addButtons() {
+        remover.style.display = "flex"
+        add.style.display = "flex"
+    },
+}
+
 const Update = {
     updateCircle() {
         circle.style.strokeDashoffset = circleValue += circleValueInterval;
@@ -74,6 +86,7 @@ const ActionButtons = {
     },
 
     activeTimer() {
+        ActionsPlay.removeButtons();
         circleValueInterval = 875 / minutes
         handle = setInterval(() => {
             if (minutes > 0) {
@@ -81,12 +94,13 @@ const ActionButtons = {
                 Update.updateValues();
             } else if (minutes === 0) {
                 AudioPlay.playAudio();
+                ActionsPlay.addButtons();
             }
         }, 1000);
     }
 };
 
-updateInnerHtml()
+updateInnerHtml();
 
 buttonAudio.addEventListener("click", AudioPlay.pauseAudio);
 

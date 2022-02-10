@@ -2,7 +2,7 @@
 
 :root {
     --whacking-dusky-blue: #475f94;
-    --loverless-light-gold: #fddc5c;
+    --loverless-light-gold: #fde37a;
     --unremarked-orangey-red: #fa4224;
     --white: #ffffff;
 }
@@ -23,9 +23,21 @@ body {
     background: var(--loverless-light-gold);
 }
 
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+#logo {
+    width: 250px;
+    height: auto;
+}
+
 main {
     width: 300px;
-    margin-top: 4rem;
 }
 
 .content-circle {
@@ -74,21 +86,22 @@ svg {
 .buttons {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 4rem;
     gap: 1rem;
 }
 
 .buttons button {
     border: none;
-    width: 100px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
-    border-radius: 30px;
+    height: 50px;
+    border-radius: 25px;
     background: var(--whacking-dusky-blue);
     opacity: 0.8;
+    transition: 2s ease;
 }
 
 .buttons button:hover {
@@ -96,8 +109,8 @@ svg {
 }
 
 .buttons button img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 /* ================Audio=============== */
@@ -117,8 +130,9 @@ svg {
     border-radius: 50%;
     border: none;
     background-color: var(--whacking-dusky-blue);
+    opacity: 0.8;
 }
 
 #buttonAudio:hover {
-    background-color: #6b81af;
+    opacity: 1;
 }
