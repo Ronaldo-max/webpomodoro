@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
-    --whacking-dusky-blue: #475f94;
-    --loverless-light-gold: #fde37a;
-    --unremarked-orangey-red: #fa4224;
+    --blue: #475f94;
+    --yellow: #ffeb9a;
+    --red: #fa4224;
     --white: #ffffff;
 }
 
@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--loverless-light-gold);
+    background: var(--yellow);
 }
 
 header {
@@ -51,7 +51,7 @@ main {
 
 #timer {
     position: absolute;
-    background: var(--unremarked-orangey-red);
+    background: var(--red);
     width: 240px;
     height: 240px;
     border-radius: 50%;
@@ -69,7 +69,7 @@ main {
 
 circle {
     fill: none;
-    stroke: var(--unremarked-orangey-red);
+    /* stroke: var(--red); */
     stroke-width: 10px;
     stroke-dasharray: 875;
     animation: anim 1s linear forwards;
@@ -99,7 +99,7 @@ svg {
     justify-content: center;
     height: 50px;
     border-radius: 25px;
-    background: var(--whacking-dusky-blue);
+    background: var(--blue);
     opacity: 0.8;
     transition: 2s ease;
 }
@@ -129,7 +129,7 @@ svg {
     justify-content: center;
     border-radius: 50%;
     border: none;
-    background-color: var(--whacking-dusky-blue);
+    background-color: var(--blue);
     opacity: 0.8;
 }
 
