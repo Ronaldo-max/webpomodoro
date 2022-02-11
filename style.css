@@ -11,32 +11,110 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+}
+
+button {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue);
+    opacity: 0.8;
 }
 
 body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background: var(--yellow);
+    align-items: center;
+    justify-content: space-around;
 }
 
 header {
+    width: 250px;
+    height: 100vh;
+}
+
+nav {
     width: 100%;
+    height: 100%;
+}
+
+ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+li {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+li.timer-menu {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--blue);
+    background-color: var(--white);
+}
+
+/* BUTTON AUDIO */
+
+#buttonAudio {
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+}
+
+/* TIMER P */
+
+.timer {
+    color: var(--blue);
+    font-weight: 900;
+    font-size: 30px;
+}
+
+/* BUTTON RESET */
+
+#reset {
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--red);
+}
+
+main {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 4rem;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
+
+/* LOGO */
 
 #logo {
     width: 250px;
     height: auto;
 }
 
-main {
+#section-timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 70%;
     width: 300px;
 }
 
@@ -44,9 +122,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
 }
 
 #timer {
@@ -62,8 +137,6 @@ main {
 
 #timer p {
     font-size: 4rem;
-    color: var(--white);
-    font-family: "Poppins", sans-serif;
     font-weight: 700;
 }
 
@@ -81,58 +154,24 @@ svg {
     justify-content: center;
 }
 
-/* ================ buttons interativos =================== */
+/* BUTTONS */
 
-.buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 4rem;
+button#play {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
     gap: 1rem;
 }
 
-.buttons button {
-    border: none;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    border-radius: 25px;
-    background: var(--blue);
-    opacity: 0.8;
-    transition: 2s ease;
-}
-
-.buttons button:hover {
+button:hover {
     opacity: 1;
 }
 
-.buttons button img {
+button p {
+    font-size: 20px;
+}
+
+button img {
     width: 25px;
     height: 25px;
-}
-
-/* ================Audio=============== */
-
-.sectionbuttonAudio {
-    position: absolute;
-    right: 0;
-    width: 10%;
-}
-
-#buttonAudio {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: none;
-    background-color: var(--blue);
-    opacity: 0.8;
-}
-
-#buttonAudio:hover {
-    opacity: 1;
 }
