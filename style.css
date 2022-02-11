@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
     --blue: #475f94;
@@ -75,13 +75,25 @@ li.timer-menu {
     height: 150px;
     border-radius: 50%;
     border: 5px solid var(--blue);
-    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-menu-box {
+    background-color: var(--blue);
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* TIMER P */
 
 .timer {
-    color: var(--blue);
+    color: var(--white);
     font-size: 30px;
     font-weight: 700;
 }
@@ -137,7 +149,7 @@ main {
 
 #timer p {
     font-size: 4rem;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 circle {
