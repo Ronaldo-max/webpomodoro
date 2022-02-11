@@ -1,70 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="shortcut icon"
+            href="./assets/favicon.svg"
+            type="image/x-icon"
+        />
+        <title>webpomodoro</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
-    <title>webpomodoro</title>
-</head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <button id="buttonAudio">
+                            <audio
+                                src="./songs/digital_watch_alarm_long.mp3"
+                            ></audio>
+                            <img src="./assets/song.svg" alt="" />
+                        </button>
+                    </li>
+                    <li class="timer-menu">
+                        <p id="interval" class="timer">00:00</p>
+                    </li>
+                    <li class="timer-menu">
+                        <p id="cicles" class="timer">0</p>
+                    </li>
+                    <li>
+                        <button id="reset">
+                            <p id="reset-text">RESET</p>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <button id="buttonAudio">
-                        <audio src="./songs/digital_watch_alarm_long.mp3"></audio>
-                        <img src="./assets/song.svg" alt="" />
-                    </button>
-                </li>
-                <li class="timer-menu">
-                    <p id="interval" class="timer">00:00</p>
-                </li>
-                <li class="timer-menu">
-                    <p id="cicles" class="timer">0</p>
-                </li>
-                <li>
-                    <button id="reset">
-                        <p id="reset-text">RESET</p>
-                    </button>
-                </li>
-            </ul>
-        </nav>
-    </header>
+        <main>
+            <img src="./assets/logo.svg" alt="logo webpomodoro" id="logo" />
 
-    <main>
-        <img src="./assets/logo.svg" alt="logo webpomodoro" id="logo" />
+            <section id="section-timer">
+                <div class="content-circle">
+                    <div id="timer">
+                        <p>25:00</p>
+                    </div>
 
-        <section id="section-timer">
-            <div class="content-circle">
-                <div id="timer">
-                    <p>25:00</p>
+                    <div id="circle">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="300px"
+                            height="300px"
+                            version="1.1"
+                        >
+                            <defs>
+                                <linearGradient
+                                    id="grad1"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="100%"
+                                    y2="0%"
+                                >
+                                    <stop
+                                        offset="0%"
+                                        style="
+                                            stop-color: #ff8f27;
+                                            stop-opacity: 1;
+                                        "
+                                    />
+                                    <stop
+                                        offset="100%"
+                                        style="
+                                            stop-color: #ff4040;
+                                            stop-opacity: 1;
+                                        "
+                                    />
+                                </linearGradient>
+                            </defs>
+
+                            <circle
+                                cx="150"
+                                cy="150"
+                                r="140"
+                                stroke-linecap="round"
+                                stroke="url(#grad1)"
+                            />
+                        </svg>
+                    </div>
                 </div>
 
-                <div id="circle">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="300px" version="1.1">
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:#ff8f27;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#ff4040;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
+                <button id="play">
+                    <img src="./assets/play.svg" alt="" />
+                    <p>START</p>
+                </button>
+            </section>
+        </main>
 
-                        <circle cx="150" cy="150" r="140" stroke-linecap="round" stroke="url(#grad1)" />
-                    </svg>
-                </div>
-            </div>
-
-            <button id="play">
-                <img src="./assets/play.svg" alt="" />
-                <p>START</p>
-            </button>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>

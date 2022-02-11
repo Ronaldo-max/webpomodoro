@@ -21,7 +21,7 @@ let minutesInterval = interval * 60;
 let circleValue = 875;
 let circleValueInterval;
 
-circleValueInterval = 875 / minutes
+circleValueInterval = 875 / minutes;
 
 let updateTimerMinutesSeconds;
 let updateTimerInterval;
@@ -41,20 +41,22 @@ const Update = {
         }
     },
 
-    updateInnerHtml (){
-        let min = Math.floor(minutes / 60)
-        let sec = minutes % 60
+    updateInnerHtml() {
+        let min = Math.floor(minutes / 60);
+        let sec = minutes % 60;
 
-        let intervalMin = Math.floor(minutesInterval / 60)
-        let intervalSec = minutesInterval % 60
-    
-        document.querySelector("#timer p").innerHTML =
-            `${ min >= 10 ? min : "0" + min}:${sec < 10 ? "0" + sec : sec}`;
+        let intervalMin = Math.floor(minutesInterval / 60);
+        let intervalSec = minutesInterval % 60;
+
+        document.querySelector("#timer p").innerHTML = `${
+            min >= 10 ? min : "0" + min
+        }:${sec < 10 ? "0" + sec : sec}`;
 
         document.querySelector("#cicles").innerHTML = ciclesTime;
 
-        textInterval.innerHTML =
-        `${ intervalMin >= 10 ? intervalMin : "0" + intervalMin}:${intervalSec < 10 ? "0" + intervalSec : intervalSec}`;
+        textInterval.innerHTML = `${
+            intervalMin >= 10 ? intervalMin : "0" + intervalMin
+        }:${intervalSec < 10 ? "0" + intervalSec : intervalSec}`;
     },
 
     updateCircle() {
@@ -66,11 +68,11 @@ const Update = {
             if (minutes === 0 && minutesInterval > 0) {
                 Update.updateInterval();
                 Update.updateInnerHtml();
-            } else if (minutesInterval === 0){
+            } else if (minutesInterval === 0) {
                 AudioPlay.playAudio();
                 clearInterval(updateTimerInterval);
             }
-        }, 1000)
+        }, 1000);
     },
 };
 
@@ -101,9 +103,9 @@ const ActionButtons = {
             if (minutes > 0) {
                 Update.updateMinutes();
                 Update.updateInnerHtml();
-                Update.updateCircle()
+                Update.updateCircle();
             } else if (minutes === 0) {
-                clearInterval(updateTimerMinutesSeconds)
+                clearInterval(updateTimerMinutesSeconds);
                 AudioPlay.playAudio();
                 ciclesTime += 1;
                 Update.updateInnerHtml();

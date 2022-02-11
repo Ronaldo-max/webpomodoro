@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
 
 :root {
     --blue: #475f94;
@@ -12,7 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: var(--white);
 }
 
@@ -82,14 +82,15 @@ li.timer-menu {
 
 .timer {
     color: var(--blue);
-    font-weight: 900;
     font-size: 30px;
+    font-weight: 700;
 }
 
 /* BUTTON RESET */
 
 #reset {
     background-color: var(--red);
+    font-weight: 400;
 }
 
 main {
@@ -136,7 +137,7 @@ main {
 
 #timer p {
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 circle {
@@ -161,6 +162,7 @@ button#play {
 
 button p {
     font-size: 20px;
+    font-weight: 400;
 }
 
 button img {
