@@ -14,7 +14,7 @@ let minutesInterval = interval * 60;
 let circleValue = 875;
 let circleValueInterval;
 
-let handle;
+let updateTimeSetInterval;
 
 const Update = {
     updateMinutes() {
@@ -46,14 +46,14 @@ const AudioPlay = {
     pauseAudio() {
         if (minutes == 0) {
             audio.pause();
-            clearInterval(handle);
+            clearInterval(updateTimeSetInterval);
         }
     },
 };
 
 const ActionButtons = {
     activeTimer() {
-        handle = setInterval(() => {
+        updateTimeSetInterval = setInterval(() => {
             if (minutes > 0) {
                 Update.updateMinutes();
                 Update.updateInnerHtml();
@@ -64,7 +64,7 @@ const ActionButtons = {
     },
 
     reset() {
-        clearInterval(handle);
+        clearInterval(updateTimeSetInterval);
 
         circleValueInterval = 0;
         circleValue = 875;
