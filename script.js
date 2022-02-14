@@ -7,14 +7,13 @@ const textInterval = document.getElementById("interval");
 
 const cicles = document.getElementById("cicles");
 
-let timer = 25;
+const timer = 25;
 let minutesFixed = timer * 60;
 let minutes = timer * 60;
-let seconds = minutes % 60;
 
 let ciclesTime = 0;
 
-let interval = 5;
+const interval = 5;
 let minutesIntervalFixed = interval * 60;
 let minutesInterval = interval * 60;
 
