@@ -14,7 +14,7 @@ This project is a time manager
 
 ## 📌 On the web
 
-<a href="https://ronaldo-max/github.io/webpomodoro/">ronaldo-max/github.io/webpomodoro/</a>
+<a href="https://ronaldo-max.github.io/webpomodoro/">https://ronaldo-max.github.io/webpomodoro/</a>
 
 ## 📜 Licence
 
